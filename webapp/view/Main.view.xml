@@ -1,0 +1,87 @@
+<mvc:View
+        controllerName="com.tutorial.ui5starter.controller.Main"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:core="sap.ui.core"
+        displayBlock="true">
+
+    <App id="app">
+        <pages>
+            <Page id="mainPage">
+                <customHeader>
+                    <Bar>
+                        <contentLeft>
+                            <Button icon="sap-icon://menu2" press="onToggleSideNav" tooltip="{i18n>menuTooltip}"/>
+                        </contentLeft>
+                        <contentMiddle>
+                            <Title text="{i18n>mainPageTitle}" level="H2"/>
+                        </contentMiddle>
+                        <contentRight>
+                            <Select id="languageSelect" change="onLanguageChange" class="sapUiTinyMarginEnd">
+                                <items>
+                                    <core:Item key="es" text="ES"/>
+                                    <core:Item key="en" text="EN"/>
+                                </items>
+                            </Select>
+                            <SearchField width="12rem" placeholder="{i18n>searchPlaceholder}"/>
+                            <Button icon="sap-icon://action-settings" tooltip="{i18n>configTooltip}"
+                                    press="onSettingsPress"/>
+                            <Button icon="sap-icon://sys-help" tooltip="{i18n>helpTooltip}" press="onHelpPress"/>
+                        </contentRight>
+                    </Bar>
+                </customHeader>
+                <content>
+                    <Panel headerText="{i18n>welcomeText}" class="sapUiResponsiveMargin">
+                        <content>
+                            <Text text="{i18n>projectDescription}"/>
+                            <HBox class="sapUiSmallMarginTop">
+                                <Button text="{i18n>standardButton}" class="sapUiSmallMarginEnd"
+                                        press="onStandardButtonPress"/>
+                                <Button text="{i18n>emphasizedButton}" type="Emphasized" class="sapUiSmallMarginEnd"
+                                        press="onEmphasizedButtonPress"/>
+                                <Button text="{i18n>negativeButton}" type="Negative" class="sapUiSmallMarginEnd"
+                                        press="onNegativeButtonPress"/>
+                                <Button text="{i18n>acceptButton}" type="Accept" press="onAcceptButtonPress"/>
+                            </HBox>
+                        </content>
+                    </Panel>
+
+                    <Panel headerText="{i18n>controlsHeader}" class="sapUiResponsiveMargin">
+                        <content>
+                            <VBox class="sapUiSmallMargin">
+                                <Label text="{i18n>inputLabel}" class="sapUiTinyMarginTop"/>
+                                <Input placeholder="{i18n>inputPlaceholder}" width="60%"/>
+
+                                <Label text="{i18n>textAreaLabel}" class="sapUiTinyMarginTop"/>
+                                <TextArea rows="3" placeholder="{i18n>textAreaPlaceholder}" width="60%"/>
+
+                                <Label text="{i18n>switchLabel}" class="sapUiTinyMarginTop"/>
+                                <Switch state="true" customTextOn="{i18n>switchOn}" customTextOff="{i18n>switchOff}"/>
+
+                                <Label text="{i18n>datePickerLabel}" class="sapUiTinyMarginTop"/>
+                                <DatePicker width="60%"/>
+
+                                <Label text="{i18n>sliderLabel}" class="sapUiTinyMarginTop"/>
+                                <Slider min="0" max="100" value="50" width="60%"/>
+                            </VBox>
+                        </content>
+                    </Panel>
+
+                </content>
+                <footer>
+                    <Bar>
+                        <contentMiddle>
+                            <HBox alignItems="Center" justifyContent="Center">
+                                <Text text="{i18n>footerText}" class="sapUiTinyMarginEnd"/>
+                                <Link text="{i18n>footerAuthor}" href="https://dangos.dev" target="_blank" class="sapUiTinyMarginEnd"/>
+                                <Link icon="sap-icon://world" href="https://dangos.dev" target="_blank" class="sapUiTinyMarginEnd"/>
+                                <Link icon="sap-icon://collaborate" href="https://github.com/dangos-dev" target="_blank" class="sapUiTinyMarginEnd"/>
+                                <Link icon="sap-icon://business-card" href="https://www.linkedin.com/in/jabesrivas/" target="_blank"/>
+                            </HBox>
+                        </contentMiddle>
+                    </Bar>
+                </footer>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>

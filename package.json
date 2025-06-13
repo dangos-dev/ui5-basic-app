@@ -1,0 +1,25 @@
+{
+  "name": "ui5-starter",
+  "version": "1.0.0",
+  "description": "Proyecto SAP UI5",
+  "private": true,
+  "scripts": {
+    "start": "ui5 serve --open index.html",
+    "build": "ui5 build",
+    "lint": "eslint webapp",
+    "serve-dist": "ws --compress -d dist"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^3.0.0",
+    "eslint": "^8.0.0",
+    "local-web-server": "^5.0.0",
+    "ui5-middleware-livereload": "^0.7.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "author": "Jabes Rivas (Dango) <https://dangos.dev>",
+  "license": "MIT"
+}
